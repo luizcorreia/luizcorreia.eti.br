@@ -6,7 +6,7 @@ image: /assets/img/como-o-business-intelligence-pode-ajudar-sua-empresa-na-crise
 description: 'Como o Business Intelligence pode ajudar sua empresa na crise.'
 introduction: 'Como o Business Intelligence pode ajudar sua empresa na crise.'
 twitter_text: 'Como o Business Intelligence pode ajudar sua empresa na crise.'
-main-class: misc
+main-class: bi
 color: '#723'
 tags:
   - cursos
