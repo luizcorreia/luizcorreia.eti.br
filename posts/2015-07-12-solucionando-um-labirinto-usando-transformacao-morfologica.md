@@ -6,7 +6,7 @@ image: /assets/img/willian-justen-de-vasconcellos-q1tvymwgwpw-unsplash.jpg
 description: 'Solucionando um labirinto usando transformação morfológica com EmguCV.'
 introduction: 'Solucionando um labirinto usando transformação morfológica com EmguCV.'
 twitter_text: 'Solucionando um labirinto usando transformação morfológica com EmguCV.'
-main-class: misc
+main-class: dev
 color: '#7AAB13'
 tags:
   - cursos
