@@ -18,9 +18,13 @@ const AboutPage = () => (
         Meu nome é Luiz Gustavo Correia.
         Eu sou um analista, pesquisador e evangelista de novas tecnologias.
         Eu acredito que tecnologias criativas são indistinguíveis de obras de arte.
+      </p>
 
+      <p>
         Oito anos de experiência na área de desenvolvimento.
         Meu trabalho foi primeiramente voltado para o desenvolvimento desktop para sistemas Windows e/ou Linux.
+      </p>
+      <p>
         Hoje sou fullstack, desenvolvendo para web, mobile, microcontroladores e sistemas embarcados.
 
       </p>
