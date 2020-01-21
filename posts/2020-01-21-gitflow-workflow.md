@@ -1,7 +1,7 @@
 ---
 layout: post
 date: '2020-01-21'
-image: /assets/img/gitflow-workflow/poshgitflowversion.png
+image: /assets/img/gitflow-workflow/poshgitflowversion.jpg
 title: Gitflow Workflow
 description: 'Git Flow uma ferramenta desenvolvida para melhorar o uso de repositórios Git.'
 introduction: 'Git Flow uma ferramenta desenvolvida para melhorar o uso de repositórios Git.'

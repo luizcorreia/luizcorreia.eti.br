@@ -2,7 +2,7 @@
 title: "Habilidades que serão exigidas em 2017, de acordo com o Linkedin"
 date: "2017-07-27"
 layout: post
-image: /assets/img/2017-07-27-habilidades-que-serao-exigidas-em-2017-de-acordo-com-o-linkedin/AAEAAQAAAAAAAApmAAAAJDE5NjcxNDc5LTE3ZGMtNDQyNy04MTZiLWNlN2JmZThjODNjNw.png
+image: /assets/img/2017-07-27-habilidades-que-serao-exigidas-em-2017-de-acordo-com-o-linkedin/AAEAAQAAAAAAAApmAAAAJDE5NjcxNDc5LTE3ZGMtNDQyNy04MTZiLWNlN2JmZThjODNjNw.jpg
 description: 'Habilidades que serão exigidas em 2017, de acordo com o Linkedin.'
 introduction: 'Habilidades que serão exigidas em 2017, de acordo com o Linkedin.'
 twitter_text: 'Habilidades que serão exigidas em 2017, de acordo com o Linkedin.'
