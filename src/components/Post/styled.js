@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import Img from 'gatsby-image'
 
 import transitions from '../../styles/transitions';
 
@@ -43,18 +44,73 @@ export const PostLink = styled(AniLink)`
   }
 `
 
-export const PostTag = styled.div`
-  align-items: center;
+export const ImageWrapper = styled.img`
   background: var(--highlight);
-  border-radius: 50%;
-  color: var(--white);
-  display: flex;
+  min-height: 90px;
+  min-width: 90px;
+  max-height: 90px;
+  max-width: 90px;
+  flex: 2;
+  object-fit: cover;
+
+  body#card & {
+    margin-bottom: 1.5rem;
+  }
+
+  ${media.lessThan('large')`
+    border-radius: 0;
+    font-size: 1rem;
+    min-height: auto;
+    min-width: auto;
+    padding: .2rem .5rem;
+    margin-bottom: .7rem;
+  `}
+`
+
+export const PostSpam = styled.span`
   font-size: 1.3rem;
   font-weight: 700;
   justify-content: center;
-  min-height: 90px;
-  min-width: 90px;
   text-transform: uppercase;
+  position:absolute;
+  background: var(--highlight);
+  width: inherit;
+
+  &.is-js {
+    background: #d6ba32;
+    color: #000;
+  }
+
+  &.is-misc {
+    background: #47650b;
+  }
+
+  &.is-dev {
+    background: #61728f;
+  }
+
+  &.is-svg {
+    background: #7d669e;
+  }
+
+  &.is-css {
+    background: #24809e;
+  }
+
+  &.is-jekyll {
+    background: #b31917;
+  }
+
+`
+
+export const PostTag = styled.div`
+  background: var(--highlight);
+  color: var(--white);
+  display: flex;
+  height: 90px;
+  width: 90px;
+  justify-content: center;
+  text-align: center;
 
   body#card & {
     margin-bottom: 1.5rem;
