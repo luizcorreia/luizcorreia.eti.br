@@ -4,6 +4,8 @@ import propTypes from 'prop-types'
 import Profile from '../Profile'
 import SocialLinks from '../SocialLinks'
 import MenuLinks from '../MenuLinks'
+import { Menu as MenuIcon } from 'styled-icons/material/Menu'
+
 
 import * as S from './styled'
 
