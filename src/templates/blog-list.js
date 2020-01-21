@@ -30,6 +30,7 @@ const BlogList = props => {
             date={node.frontmatter.date}
             description={node.frontmatter.description}
             main_class={node.frontmatter.main_class}
+            image={node.frontmatter.image}
           />
         ))}
       </S.ListWrapper>
@@ -65,6 +66,7 @@ export const PostListQuery = graphql`
             description
             main_class
             title
+            image
           }
           timeToRead
         }
