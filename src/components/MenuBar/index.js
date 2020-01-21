@@ -16,7 +16,7 @@ const MenuBar = () => {
   const [theme, setTheme] = useState(null)
   const [display, setDisplay] = useState(null)
 
-  const isDarkMode = theme === 'dark'
+  const isLightMode = theme === 'light'
   const isListMode = display === 'list'
 
   if (theme !== null && display !== null) {
@@ -65,7 +65,7 @@ const MenuBar = () => {
         <S.MenuBarItem
           title="Mudar o Tema"
           onClick={() => {
-            window.__setPreferredTheme(isDarkMode ? 'light' : 'dark')
+            window.__setPreferredTheme(isLightMode ? 'dark' : 'light')
 
             if (window.DISQUS !== undefined) {
               window.setTimeout(() => {
@@ -76,7 +76,7 @@ const MenuBar = () => {
             }
           }}
           className={theme}
-          isDarkMode={isDarkMode}
+          isDarkMode={isLightMode}
         >
           <Light />
         </S.MenuBarItem>

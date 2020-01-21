@@ -18,7 +18,7 @@ export default class HTML extends React.Component {
           />
           {this.props.headComponents}
         </head>
-        <body {...this.props.bodyAttributes} className="dark">
+        <body {...this.props.bodyAttributes} className="light">
           <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -41,7 +41,7 @@ export default class HTML extends React.Component {
                   } catch (err) {}
                 }
 
-                setTheme(preferredTheme || 'dark');
+                setTheme(preferredTheme || 'light');
 
                 window.__onDisplayChange = function() {};
                 function setDisplay(newDisplay) {

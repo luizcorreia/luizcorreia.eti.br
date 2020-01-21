@@ -53,18 +53,14 @@ export const ImageWrapper = styled.img`
   flex: 2;
   object-fit: cover;
 
+  ${media.lessThan('large')`
+    display: none;
+  `}
+
   body#card & {
     margin-bottom: 1.5rem;
   }
 
-  ${media.lessThan('large')`
-    border-radius: 0;
-    font-size: 1rem;
-    min-height: auto;
-    min-width: auto;
-    padding: .2rem .5rem;
-    margin-bottom: .7rem;
-  `}
 `
 
 export const PostSpam = styled.span`
@@ -75,6 +71,15 @@ export const PostSpam = styled.span`
   position:absolute;
   background: var(--highlight);
   width: inherit;
+  min-width: 90px;
+
+  ${media.lessThan('large')`
+    border-radius: 0;
+    font-size: 1rem;
+    min-height: auto;
+    min-width: auto;
+    position: relative;
+  `}
 
   &.is-js {
     background: #d6ba32;
@@ -107,8 +112,8 @@ export const PostTag = styled.div`
   background: var(--highlight);
   color: var(--white);
   display: flex;
-  height: 90px;
-  width: 90px;
+  min-height: 90px;
+  min-width: 90px;
   justify-content: center;
   text-align: center;
 

@@ -91,7 +91,8 @@ const GlobalStyles = createGlobalStyle`
     --texts: #192734;
     --highlight: #d96523;
     --mediumBackground: #f0f0f3;
-    --background: #fff;
+    --background: rgba(255, 255, 255, 1);
+
     --white: #fff;
     --black: #222;
   }
