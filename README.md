@@ -1,8 +1,7 @@
 # Luiz Correia - Blog
 
-Esse é o meu blog pessoal que está rodando usando:
 [**https://luizcorreia.eti.br**](luizcorreia.eti.br).
-
+Esse é o meu blog pessoal que está rodando usando:
 - [Gatsby](https://www.gatsbyjs.org)
 - [React](https://reactjs.org)
 - [GraphQL](https://graphql.org)
