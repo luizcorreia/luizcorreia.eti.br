@@ -20,7 +20,7 @@ export default props => {
   const previous = props.pageContext.previous
 
   return (
-    <Layout>
+    <Layout slug={post.fields.slug}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description}

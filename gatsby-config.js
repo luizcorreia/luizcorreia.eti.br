@@ -52,7 +52,8 @@ const pluginConfig = [
             removeAccents: true
           }
         },
-        `gatsby-remark-prismjs`
+        `gatsby-remark-prismjs`,
+        `gatsby-remark-social-cards`,
       ]
     }
   },
