@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
+import { Helmet } from 'react-helmet'
 
 import { TransitionPortal } from 'gatsby-plugin-transition-link'
 
@@ -10,7 +11,7 @@ import MenuBar from '../MenuBar'
 
 import * as S from './styled'
 
-const Layout = ({ children }) => {
+const Layout = ({ slug, children }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -20,6 +21,7 @@ const Layout = ({ children }) => {
             position
             description
             authorDescription
+            siteUrl
           }
         }
       }
@@ -27,6 +29,14 @@ const Layout = ({ children }) => {
   )
 
   return (
+    <>
+    <Helmet title={site.siteMetadata.title}>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:image"
+          content={`${site.siteMetadata.siteUrl}${slug}twitter-card.jpg`}
+        />
+      </Helmet>
     <S.LayoutWrapper>
       <GlobalStyles />
       <TransitionPortal level="top">
@@ -37,6 +47,7 @@ const Layout = ({ children }) => {
         <MenuBar />
       </TransitionPortal>
     </S.LayoutWrapper>
+    </>
   )
 }
 

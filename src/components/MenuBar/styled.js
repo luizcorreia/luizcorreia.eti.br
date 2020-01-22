@@ -12,7 +12,6 @@ export const MenuBarWrapper = styled.aside`
   display: flex;
   flex-direction: column;
   height: 100vh;
-  justify-content: space-between;
   padding: 0.8rem 0;
   position: fixed;
   right: 0;
@@ -27,6 +26,7 @@ export const MenuBarWrapper = styled.aside`
     padding: 0;
     position: fixed;
     width: 100%;
+    justify-content: center;
   `}
 `
 
@@ -36,6 +36,8 @@ export const MenuBarGroup = styled.div`
 
   ${media.lessThan('large')`
     flex-direction: row;
+    justify-content: center;
+    margin: auto;
   `}
 `
 
