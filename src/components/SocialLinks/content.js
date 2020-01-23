@@ -9,7 +9,7 @@ const links = [
   },
   {
     label: 'Youtube',
-    url: 'https://www.youtube.com/luizcorreia'
+    url: 'https://www.youtube.com/channel/UCyIloHqHvd2wBfSLpl-wCIw'
   },
   {
     label: 'Instagram',

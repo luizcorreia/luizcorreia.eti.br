@@ -13,6 +13,7 @@ export const MenuLinksList = styled.ul`
   font-size: 1.2rem;
   font-weight: 300;
   ${media.lessThan('large')`
+    padding-top: 0.1rem;
     font-size: 0.8rem;
     font-weight: 300;
     display: flex;

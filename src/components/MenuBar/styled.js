@@ -26,7 +26,7 @@ export const MenuBarWrapper = styled.aside`
     padding: 0;
     position: fixed;
     width: 100%;
-    justify-content: center;
+    justify-content: space-between;
   `}
 `
 
@@ -36,8 +36,9 @@ export const MenuBarGroup = styled.div`
 
   ${media.lessThan('large')`
     flex-direction: row;
-    justify-content: center;
     margin: auto;
+    justify-content: space-between;
+    width: 100%;
   `}
 `
 
