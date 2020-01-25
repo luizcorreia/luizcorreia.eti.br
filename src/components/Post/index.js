@@ -46,6 +46,7 @@ Post.propTypes = {
   timeToRead: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   main_class: PropTypes.string,
+  image: PropTypes.string.isRequired,
   disableCard: PropTypes.bool
 }
 
