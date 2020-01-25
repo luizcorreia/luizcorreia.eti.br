@@ -12,6 +12,7 @@ const postQuery = `{
           date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
           description
           main_class
+          image
         }
         excerpt(pruneLength: 5000)
       }
