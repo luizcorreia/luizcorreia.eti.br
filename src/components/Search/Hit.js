@@ -13,6 +13,7 @@ const Hit = props => {
       date={hit.date}
       description={hit.description}
       main_class={hit.main_class}
+      image={hit.image}
     />
   )
 }
