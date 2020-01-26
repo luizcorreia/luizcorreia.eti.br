@@ -103,7 +103,7 @@ const pluginConfig = [
     resolve: `gatsby-plugin-manifest`,
     options: {
       name: `Luiz Correia blog`,
-      short_name: `LuizCorreia`,
+      short_name: `Luiz Correia`,
       start_url: `/`,
       background_color: `#1C2938`,
       theme_color: `#1C2938`,
@@ -203,11 +203,14 @@ if (process.env.CONTEXT === 'production') {
 module.exports = {
   siteMetadata: {
     title: `Luiz Correia`,
+    titleTemplate: "%s · Luiz Correia",
     position: 'Desenvolvedor Full Stack',
     description: `Um blog de um desenvolvedor`,
     authorDescription: `Membro do Core Team da Meatballs, escrevo sobre tecnologia.`,
     author: `@luiz__correia`,
-    siteUrl: 'https://luizcorreia.eti.br'
+    siteUrl: 'https://www.luizcorreia.eti.br',
+    image: '/assets/img/blog-image.png',
+    twitterUsername: `@luiz__correia`,
   },
   plugins: pluginConfig
 }

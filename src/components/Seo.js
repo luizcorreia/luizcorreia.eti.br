@@ -10,94 +10,79 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
-function SEO({ description, lang, meta, title, image }) {
+function SEO({ title, description, image, pathname, article, lang, meta }) {
   const { site } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
-            title
-            description
             author
+            defaultTitle: title
+            titleTemplate
+            defaultDescription: description
+            siteUrl
+            defaultImage: image
+            twitterUsername
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
-
-  const ogImage =
-    image || 'https://luizcorreia.eti.br/assets/img/blog-image.png'
+  const seo = {
+    title: title || site.siteMetadata.defaultTitle,
+    description: description || site.siteMetadata.defaultDescription,
+    image: `${site.siteMetadata.siteUrl}${image || site.siteMetadata.defaultImage}`,
+    url: `${site.siteMetadata.siteUrl}${pathname || "/"}`,
+  }
 
   return (
     <Helmet
       htmlAttributes={{
         lang
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `aplication-name`,
-          content: 'Luiz Correia Blog'
-        },
-        {
-          name: `description`,
-          content: metaDescription
-        },
-        {
-          property: `og:image`,
-          content: ogImage
-        },
-        {
-          property: `og:title`,
-          content: title
-        },
-        {
-          property: `og:description`,
-          content: metaDescription
-        },
-        {
-          property: `og:type`,
-          content: `website`
-        },
-        {
-          name: `twitter:card`,
-          content: `summary_large_image`
-        },
-        {
-          name: `twitter:image:src`,
-          content: ogImage
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author
-        },
-        {
-          name: `twitter:title`,
-          content: title
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription
-        }
-      ].concat(meta)}
-    />
+      title={seo.title}
+      titleTemplate={`%s | ${site.siteMetadata.title}`}>
+      <meta name="description" content={seo.description} />
+            <meta name="image" content={seo.image} />
+            {seo.url && <meta property="og:url" content={seo.url} />}
+            {(article ? true : null) && (
+              <meta property="og:type" content="article" />
+            )}
+            {seo.title && <meta property="og:title" content={seo.title} />}
+            {seo.description && (
+              <meta property="og:description" content={seo.description} />
+            )}
+            {seo.image && <meta property="og:image" content={seo.image} />}
+            <meta name="twitter:card" content="summary_large_image" />
+            {site.siteMetadata.twitterUsername && (
+              <meta name="twitter:creator" content={site.siteMetadata.twitterUsername} />
+            )}
+            {seo.title && <meta name="twitter:title" content={seo.title} />}
+            {seo.description && (
+              <meta name="twitter:description" content={seo.description} />
+            )}
+            {seo.image && <meta name="twitter:image" content={seo.image} />}
+    </Helmet>
   )
 }
 
 SEO.defaultProps = {
   lang: `pt-br`,
-  meta: [],
-  description: ``
+  title: null,
+  description: null,
+  image: null,
+  pathname: null,
+  article: false,
 }
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  pathname: PropTypes.string,
 }
 
 export default SEO
