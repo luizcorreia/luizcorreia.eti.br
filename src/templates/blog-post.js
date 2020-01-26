@@ -24,7 +24,7 @@ export default props => {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description}
-        image={`https://luizcorreia.eti.br/${post.frontmatter.image}`}
+        image={`https://www.luizcorreia.eti.br/${post.frontmatter.image}`}
         pathname={post.frontmatter.pathname}
         article={post.frontmatter.article}
       />
