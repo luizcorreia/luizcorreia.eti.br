@@ -6,7 +6,7 @@ image: /assets/img/2020-04-04-typescript-declarando-mongoose-schema-model/typego
 description: 'TypeScript: Declarando Mongoose Schema + Model'
 introduction: 'TypeScript: Declarando Mongoose Schema + Model'
 twitter_text: 'TypeScript: Declarando Mongoose Schema + Model'
-main-class: bi
+main-class: dev
 color: '#df6e21'
 tags:
   - dev
