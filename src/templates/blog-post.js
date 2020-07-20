@@ -20,7 +20,7 @@ export default props => {
   const previous = props.pageContext.previous
 
   return (
-    <Layout slug={post.fields.slug}>
+    <>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description}
@@ -28,19 +28,21 @@ export default props => {
         pathname={post.frontmatter.pathname}
         article={post.frontmatter.article}
       />
-      <PostHeader>
-        <PostDate>
-          {post.frontmatter.date} • {post.timeToRead} min de leitura
-        </PostDate>
-        <PostTitle>{post.frontmatter.title}</PostTitle>
-        <PostDescription>{post.frontmatter.description}</PostDescription>
-      </PostHeader>
-      <MainContent>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </MainContent>
-      <RecommendedPosts next={next} previous={previous} />
-      <Comments url={post.fields.slug} title={post.frontmatter.title} />
-    </Layout>
+      <Layout slug={post.fields.slug}>
+        <PostHeader>
+          <PostDate>
+            {post.frontmatter.date} • {post.timeToRead} min de leitura
+          </PostDate>
+          <PostTitle>{post.frontmatter.title}</PostTitle>
+          <PostDescription>{post.frontmatter.description}</PostDescription>
+        </PostHeader>
+        <MainContent>
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        </MainContent>
+        <RecommendedPosts next={next} previous={previous} />
+        <Comments url={post.fields.slug} title={post.frontmatter.title} />
+      </Layout>
+    </>
   )
 }
 
