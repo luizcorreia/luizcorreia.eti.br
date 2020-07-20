@@ -30,23 +30,23 @@ const Layout = ({ slug, children }) => {
 
   return (
     <>
-    <Helmet title={site.siteMetadata.title}>
+      <Helmet title={site.siteMetadata.title}>
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:image"
           content={`${site.siteMetadata.siteUrl}${slug}twitter-card.jpg`}
         />
       </Helmet>
-    <S.LayoutWrapper>
-      <GlobalStyles />
-      <TransitionPortal level="top">
-        <Sidebar site={site.siteMetadata} />
-      </TransitionPortal>
-      <S.LayoutMain>{children}</S.LayoutMain>
-      <TransitionPortal level="top">
-        <MenuBar />
-      </TransitionPortal>
-    </S.LayoutWrapper>
+      <S.LayoutWrapper>
+        <GlobalStyles />
+        <TransitionPortal level="top">
+          <Sidebar site={site.siteMetadata} />
+        </TransitionPortal>
+        <S.LayoutMain>{children}</S.LayoutMain>
+        <TransitionPortal level="top">
+          <MenuBar />
+        </TransitionPortal>
+      </S.LayoutWrapper>
     </>
   )
 }

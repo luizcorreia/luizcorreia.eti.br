@@ -23,7 +23,7 @@ export const MenuLinksList = styled.ul`
 `
 
 export const MenuLinksItem = styled.li`
-${media.lessThan('large')`
+  ${media.lessThan('large')`
   margin-left: 0.8rem;
 `}
   padding: 0.5rem 0;

@@ -15,17 +15,14 @@ const Post = ({
   disableCard,
   image
 }) => {
-
   return (
     <S.PostLink to={slug} cover direction="right" bg={getThemeColor()}>
       <S.PostWrapper className={disableCard ? 'disableCard' : ''}>
         {main_class && (
           <S.PostTag className={`is-${main_class}`}>
-            <S.ImageWrapper  src={`${image}` } />
+            <S.ImageWrapper src={`${image}`} />
             <S.PostSpam className={`is-${main_class}`}>{main_class}</S.PostSpam>
           </S.PostTag>
-
-
         )}
         <S.PostInfo>
           <S.PostDate>
