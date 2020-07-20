@@ -209,7 +209,7 @@ module.exports = {
     description: `Um blog de um desenvolvedor`,
     authorDescription: `Membro do Core Team da Meatballs, escrevo sobre tecnologia.`,
     author: `@luiz__correia`,
-    siteUrl: 'https://www.luizcorreia.eti.br',
+    siteUrl: 'https://luizcorreia.eti.br',
     image: '/assets/img/blog-image.png',
     twitterUsername: `@luiz__correia`,
   },
