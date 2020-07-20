@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
-import transitions from '../../styles/transitions';
+import transitions from '../../styles/transitions'
 
 export const PostWrapper = styled.section`
   align-items: center;
@@ -59,7 +59,6 @@ export const ImageWrapper = styled.img`
   body#card & {
     margin-bottom: 1.5rem;
   }
-
 `
 
 export const PostSpam = styled.span`
@@ -67,7 +66,7 @@ export const PostSpam = styled.span`
   font-weight: 700;
   justify-content: center;
   text-transform: uppercase;
-  position:absolute;
+  position: absolute;
   background: var(--highlight);
   width: inherit;
   min-width: 90px;
@@ -104,7 +103,6 @@ export const PostSpam = styled.span`
   &.is-jekyll {
     background: #b31917;
   }
-
 `
 
 export const PostTag = styled.div`

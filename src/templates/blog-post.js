@@ -25,7 +25,7 @@ export default props => {
         title={post.frontmatter.title}
         description={post.frontmatter.description}
         image={post.frontmatter.image}
-        pathname={post.frontmatter.pathname}
+        pathname={post.fields.slug}
         article={post.frontmatter.article}
       />
       <PostHeader>

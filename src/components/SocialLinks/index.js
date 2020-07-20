@@ -6,14 +6,13 @@ import Icons from './Icons'
 
 import * as S from './styled'
 
-const socialLinkClickTrack = (social) => {
+const socialLinkClickTrack = social => {
   ReactGA.event({
     category: 'social link',
     action: 'click',
     label: social
   })
 }
-
 
 const SocialLinks = () => (
   <S.SocialLinksWrapper>

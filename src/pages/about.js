@@ -15,18 +15,19 @@ const AboutPage = () => (
     <MainContent>
       <h1>Sobre mim</h1>
       <p>
-        Meu nome é Luiz Gustavo Correia.
-        Eu sou um analista, pesquisador e evangelista de novas tecnologias.
-        Eu acredito que tecnologias criativas são indistinguíveis de obras de arte.
+        Meu nome é Luiz Gustavo Correia. Eu sou um analista, pesquisador e
+        evangelista de novas tecnologias. Eu acredito que tecnologias criativas
+        são indistinguíveis de obras de arte.
       </p>
 
       <p>
-        Oito anos de experiência na área de desenvolvimento.
-        Meu trabalho foi primeiramente voltado para o desenvolvimento desktop para sistemas Windows e/ou Linux.
+        Oito anos de experiência na área de desenvolvimento. Meu trabalho foi
+        primeiramente voltado para o desenvolvimento desktop para sistemas
+        Windows e/ou Linux.
       </p>
       <p>
-        Hoje sou fullstack, desenvolvendo para web, mobile, microcontroladores e sistemas embarcados.
-
+        Hoje sou fullstack, desenvolvendo para web, mobile, microcontroladores e
+        sistemas embarcados.
       </p>
 
       <h2>Habilidades</h2>
