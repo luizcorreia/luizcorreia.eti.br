@@ -13,9 +13,6 @@ tags:
   - git
   - github
   - md
-  - nodejs
-  - javascript
-  - expressjs
 ---
 
 Houve mudanças drásticas nas maneiras de mostrar seu perfil para o mundo, especialmente quando você é um programador ou colaborador de código aberto.
