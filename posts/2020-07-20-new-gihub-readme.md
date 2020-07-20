@@ -1,6 +1,6 @@
 ---
 title: "Explore o novo recurso README do Github"
-date: "2020-04-04"
+date: "2020-07-20"
 layout: post
 image: /assets/img/2020-07-20-new-gihub-readme/github_projects_developer_job_seekers_need.jpg
 description: 'Explore novas maneiras de mostrar seu currículo no GitHub como desenvolvedor ou colaborador de código aberto'
