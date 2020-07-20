@@ -32,7 +32,7 @@ function SEO({ title, description, image, pathname, article, lang, meta }) {
   const seo = {
     title: title || site.siteMetadata.defaultTitle,
     description: description || site.siteMetadata.defaultDescription,
-    image: `${site.siteMetadata.siteUrl}${image || site.siteMetadata.defaultImage}`,
+    image: `${image || site.siteMetadata.defaultImage}`,
     url: `${site.siteMetadata.siteUrl}${pathname || "/"}`,
   }
 

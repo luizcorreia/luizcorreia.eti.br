@@ -204,6 +204,7 @@ module.exports = {
   siteMetadata: {
     title: `Luiz Correia`,
     titleTemplate: "%s · Luiz Correia",
+    defaultTitle: "Luiz Correia",
     position: 'Desenvolvedor Full Stack',
     description: `Um blog de um desenvolvedor`,
     authorDescription: `Membro do Core Team da Meatballs, escrevo sobre tecnologia.`,
