@@ -39,4 +39,10 @@ Os passos são:
   - [Link 2:] (https://github.com/badges/shields)
 - Você também pode adicionar um impressionante cartão de estatísticas do Github, que mostra suas estatísticas atuais dinamicamente. Link: [github-readme-stats](https://github.com/anuraghazra/github-readme-stats)
 
+## Confira meu perfil
+![myProfile](/assets/img/2020-07-20-new-gihub-readme/2020-07-20_15-28.png)
+
+Está em constante atualização, mas por hoje gostei dele assim.
+
 Você também pode procurar alguns repositórios interessantes e o trabalho de outras pessoas [aqui](https://github.com/abhisheknaiidu/awesome-github-profile-readme) .
+
