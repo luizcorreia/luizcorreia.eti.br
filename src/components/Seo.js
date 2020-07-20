@@ -42,7 +42,7 @@ function SEO({ title, description, image, pathname, article, lang, meta }) {
         lang
       }}
       title={seo.title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}>
+      titleTemplate={site.siteMetadata.titleTemplate}>
       <meta name="description" content={seo.description} />
             <meta name="image" content={seo.image} />
             {seo.url && <meta property="og:url" content={seo.url} />}
