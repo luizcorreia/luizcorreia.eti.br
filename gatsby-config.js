@@ -167,7 +167,7 @@ const pluginConfig = [
             }
           `,
           output: '/feed.xml',
-          title: 'Luiz Coreria Blog - RSS Feed'
+          title: 'Luiz Correia Blog - RSS Feed'
         }
       ]
     }

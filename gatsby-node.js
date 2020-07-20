@@ -34,6 +34,7 @@ exports.createPages = ({ graphql, actions }) => {
               description
               main_class
               title
+              image
             }
           }
           next {
