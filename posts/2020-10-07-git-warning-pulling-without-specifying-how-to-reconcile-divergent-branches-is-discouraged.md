@@ -150,7 +150,7 @@ fatal: Not possible to fast-forward, aborting.
 Então podemos dizer explicitamente ao Git para criar um commit de merge
 
 ```bash
-git pull --merge
+git pull --rebase=merges
 ```
 ou fazer rebase das nossas mudanças
 ```bash
