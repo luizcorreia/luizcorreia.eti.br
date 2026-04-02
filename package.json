@@ -65,5 +65,15 @@
   },
   "bugs": {
     "url": "https://github.com/luizcorreia/luizcorreia.eti.br/issues"
+  },
+  "overrides": {
+    "lodash": "^4.17.21",
+    "cookie": "^0.7.0",
+    "serialize-javascript": "^7.0.5",
+    "path-to-regexp": "^0.1.13",
+    "tmp": "^0.2.3",
+    "braces": "^3.0.3",
+    "semver": "^7.6.0",
+    "immutable": "^3.8.3"
   }
 }
