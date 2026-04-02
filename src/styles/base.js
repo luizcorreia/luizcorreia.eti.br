@@ -239,4 +239,43 @@ export const MainContent = styled.section`
       opacity: 0.8;
     }
   }
+
+  table {
+    border-collapse: collapse;
+    margin: 1.6rem auto 2.4rem;
+    overflow-x: auto;
+    display: block;
+    width: 100%;
+
+    ${media.lessThan('large')`
+      font-size: 1rem;
+    `}
+  }
+
+  th {
+    background: var(--highlight);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    padding: 0.75rem 1.25rem;
+    text-align: left;
+  }
+
+  td {
+    border-bottom: 1px solid var(--borders);
+    color: var(--postColor);
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 0.75rem 1.25rem;
+    vertical-align: top;
+  }
+
+  tr:nth-child(even) td {
+    background: var(--mediumBackground);
+  }
+
+  tr:hover td {
+    background: var(--borders);
+  }
 `
