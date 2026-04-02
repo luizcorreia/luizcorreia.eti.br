@@ -6,8 +6,8 @@ title: "LGPD: A lei geral de proteção de dados"
 description: 'LGPD: maioria das empresas brasileiras precisa se adequar às novas regras.'
 introduction: 'LGPD: maioria das empresas brasileiras precisa se adequar às novas regras.'
 twitter_text: 'LGPD: maioria das empresas brasileiras precisa se adequar às novas regras.'
-main-class: misc
-color: '#7AAB13'
+main-class: privacy
+color: '#6c3483'
 tags:
   - lgpd
   - lei

@@ -11,47 +11,59 @@ const AboutPage = () => (
     <MainContent>
       <h1>Sobre mim</h1>
       <p>
-        Meu nome é Luiz Gustavo Correia. Eu sou um analista, pesquisador e
-        evangelista de novas tecnologias. Eu acredito que tecnologias criativas
-        são indistinguíveis de obras de arte.
+        Meu nome é Luiz Gustavo Correia. Sou Arquiteto de Soluções com foco em
+        segurança da informação e privacidade digital. Acredito que tecnologia
+        deve empoderar as pessoas — e não ser usada contra elas.
       </p>
 
       <p>
-        Oito anos de experiência na área de desenvolvimento. Meu trabalho foi
-        primeiramente voltado para o desenvolvimento desktop para sistemas
-        Windows e/ou Linux.
-      </p>
-      <p>
-        Hoje sou fullstack, desenvolvendo para web, mobile, microcontroladores e
-        sistemas embarcados.
+        Ao longo de mais de uma década de carreira, passei pelo desenvolvimento
+        de software, sistemas embarcados e arquitetura de soluções em nuvem.
+        Hoje me dedico a projetar sistemas seguros, escaláveis e que respeitam
+        a privacidade dos usuários por padrão.
       </p>
 
-      <h2>Habilidades</h2>
+      <p>
+        Sou autor do livro{' '}
+        <a
+          href="https://a.co/d/01UkJJyi"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Introdução à Privacidade Digital
+        </a>
+        , um guia prático sobre como proteger seus dados e sua autonomia no
+        mundo conectado — sem abrir mão da vida digital.
+      </p>
+
+      <h2>Áreas de atuação</h2>
 
       <ul>
-        <li>HTML e Template Languages</li>
-        <li>Design Responsivo (Mobile First)</li>
-        <li>Data Mining</li>
-        <li>Amazon Cloud</li>
-        <li>Javascript (Design Patterns, Testes, ES6/7)</li>
-        <li>ReactJS / Redux / Flux</li>
-        <li>NodeJS</li>
-        <li>React-Native</li>
-        <li>Git</li>
-        <li>Python</li>
-        <li>C/C++</li>
-        <li>PostgreSQL - MySQL - MongoDB</li>
-        <li>Edição de Vídeo</li>
-        <li>Manipulação de Imagens</li>
-        <li>TDD e Continuous Integration</li>
-        <li>O que eu não sei, aprendo rápido =)</li>
+        <li>Arquitetura de Soluções em Nuvem (AWS)</li>
+        <li>Segurança da Informação</li>
+        <li>Privacidade Digital e conformidade com LGPD/GDPR</li>
+        <li>Design de sistemas distribuídos e resilientes</li>
+        <li>DevSecOps</li>
+        <li>Sistemas embarcados e IoT</li>
+      </ul>
+
+      <h2>Habilidades técnicas</h2>
+
+      <ul>
+        <li>Cloud: AWS, arquiteturas serverless e microsserviços</li>
+        <li>Linguagens: JavaScript/TypeScript, Python, Go, C/C++</li>
+        <li>Segurança: threat modeling, OWASP, criptografia aplicada</li>
+        <li>Privacidade: LGPD, GDPR, Privacy by Design</li>
+        <li>Bancos de dados: PostgreSQL, MongoDB, DynamoDB</li>
+        <li>Infraestrutura: Terraform, Docker, Kubernetes</li>
+        <li>Git, TDD e integração contínua</li>
       </ul>
 
       <h2>Contato</h2>
 
       <p>
-        Você pode entrar em contato comigo através de qualquer uma das minhas
-        redes sociais.
+        Você pode me encontrar nas redes sociais abaixo ou pelo e-mail{' '}
+        <a href="mailto:luiz@luizcorreia.eti.br">luiz@luizcorreia.eti.br</a>.
       </p>
 
       <SocialLinks hideStyle />
@@ -65,7 +77,7 @@ export function Head() {
   return (
     <SEO
       title="Sobre mim"
-      description="Saiba um pouco mais sobre o desenvolvedor por trás deste blog."
+      description="Arquiteto de soluções com foco em segurança e privacidade digital. Autor do livro Introdução à Privacidade Digital."
     />
   )
 }

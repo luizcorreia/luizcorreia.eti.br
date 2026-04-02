@@ -103,6 +103,14 @@ export const PostSpam = styled.span`
   &.is-jekyll {
     background: #b31917;
   }
+
+  &.is-security {
+    background: #c0392b;
+  }
+
+  &.is-privacy {
+    background: #6c3483;
+  }
 `
 
 export const PostTag = styled.div`
@@ -150,6 +158,14 @@ export const PostTag = styled.div`
 
   &.is-jekyll {
     background: #b31917;
+  }
+
+  &.is-security {
+    background: #c0392b;
+  }
+
+  &.is-privacy {
+    background: #6c3483;
   }
 `
 
