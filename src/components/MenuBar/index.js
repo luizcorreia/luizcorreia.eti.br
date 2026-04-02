@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react'
 
-import { Home } from 'styled-icons/boxicons-solid/Home'
-import { SearchAlt2 as Search } from 'styled-icons/boxicons-regular/SearchAlt2'
-import { UpArrowAlt as Arrow } from 'styled-icons/boxicons-regular/UpArrowAlt'
-import { Lightbulb as Light } from 'styled-icons/remix-line/Lightbulb'
-import { ThList } from 'styled-icons/typicons/ThList'
-import { Grid } from 'styled-icons/boxicons-solid/Grid'
-
-import getThemeColor from '../../utils/getThemeColor'
+import { Home } from 'styled-icons/boxicons-solid'
+import { SearchAlt2 as Search } from 'styled-icons/boxicons-regular'
+import { UpArrowAlt as Arrow } from 'styled-icons/boxicons-regular'
+import { Lightbulb as Light } from 'styled-icons/remix-line'
+import { ThList } from 'styled-icons/typicons'
+import { Grid } from 'styled-icons/boxicons-solid'
 
 import * as S from './styled'
 import * as GA from './trackers'
@@ -35,26 +33,12 @@ const MenuBar = () => {
   return (
     <S.MenuBarWrapper>
       <S.MenuBarGroup>
-        <S.MenuBarLink
-          to="/"
-          cover
-          direction="right"
-          bg={getThemeColor()}
-          title="Voltar para Home"
-          activeClassName="active"
-        >
+        <S.MenuBarLink to="/" title="Voltar para Home" activeClassName="active">
           <S.MenuBarItem>
             <Home />
           </S.MenuBarItem>
         </S.MenuBarLink>
-        <S.MenuBarLink
-          to="/search"
-          cover
-          direction="right"
-          bg={getThemeColor()}
-          title="Search"
-          activeClassName="active"
-        >
+        <S.MenuBarLink to="/search" title="Search" activeClassName="active">
           <S.MenuBarItem onClick={() => GA.searchClickTrack()}>
             <Search />
           </S.MenuBarItem>
@@ -66,9 +50,7 @@ const MenuBar = () => {
 
             if (window.DISQUS !== undefined) {
               window.setTimeout(() => {
-                window.DISQUS.reset({
-                  reload: true
-                })
+                window.DISQUS.reset({ reload: true })
               }, 300)
             }
           }}

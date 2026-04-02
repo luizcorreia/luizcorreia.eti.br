@@ -14,20 +14,13 @@ import {
   MainContent
 } from '../styles/base'
 
-export default props => {
+const BlogPost = props => {
   const post = props.data.markdownRemark
   const next = props.pageContext.next
   const previous = props.pageContext.previous
 
   return (
-    <Layout slug={post.fields.slug}>
-      <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description}
-        image={post.frontmatter.image}
-        pathname={post.fields.slug}
-        article={post.frontmatter.article}
-      />
+    <Layout>
       <PostHeader>
         <PostDate>
           {post.frontmatter.date} • {post.timeToRead} min de leitura
@@ -41,6 +34,21 @@ export default props => {
       <RecommendedPosts next={next} previous={previous} />
       <Comments url={post.fields.slug} title={post.frontmatter.title} />
     </Layout>
+  )
+}
+
+export default BlogPost
+
+export function Head({ data }) {
+  const post = data.markdownRemark
+  return (
+    <SEO
+      title={post.frontmatter.title}
+      description={post.frontmatter.description}
+      image={post.frontmatter.image}
+      pathname={post.fields.slug}
+      article
+    />
   )
 }
 

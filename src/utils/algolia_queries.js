@@ -1,5 +1,5 @@
 const postQuery = `{
-  posts: allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }){
+  posts: allMarkdownRemark(sort: { frontmatter: { date: DESC } }){
     edges {
       node {
         objectID: id
@@ -28,6 +28,7 @@ const flatten = arr =>
     ),
     ...rest
   }))
+
 const settings = { attributesToSnippet: [`excerpt:20`] }
 
 const queries = [

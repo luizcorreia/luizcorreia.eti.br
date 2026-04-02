@@ -1,0 +1,9 @@
+customHeaders:
+  - pattern: '/sw.js'
+    headers:
+      - key: 'Cache-Control'
+        value: 'max-age=0, no-cache, no-store, must-revalidate'
+  - pattern: '**/*'
+    headers:
+      - key: 'Access-Control-Allow-Origin'
+        value: '*'

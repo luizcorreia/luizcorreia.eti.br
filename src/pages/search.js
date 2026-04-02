@@ -10,16 +10,19 @@ const algolia = {
   indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME
 }
 
-const SearchPage = props => {
-  return (
-    <Layout>
-      <SEO
-        title="Search"
-        description="Vai lá, não tenha medo. Busque por posts novos e bem antigos."
-      />
-      <Search algolia={algolia} />
-    </Layout>
-  )
-}
+const SearchPage = () => (
+  <Layout>
+    <Search algolia={algolia} />
+  </Layout>
+)
 
 export default SearchPage
+
+export function Head() {
+  return (
+    <SEO
+      title="Search"
+      description="Vai lá, não tenha medo. Busque por posts novos e bem antigos."
+    />
+  )
+}

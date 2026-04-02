@@ -64,7 +64,6 @@ const Button = styled(Link)`
 
 const NotFoundPage = () => (
   <Container>
-    <SEO title="404: Not found" />
     <GlobalStyles />
     <Title>404</Title>
     <Text>Ué? Cadê? Parece que não tem o que você procura.</Text>
@@ -73,3 +72,7 @@ const NotFoundPage = () => (
 )
 
 export default NotFoundPage
+
+export function Head() {
+  return <SEO title="404: Not found" />
+}

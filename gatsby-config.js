@@ -4,8 +4,7 @@ const queries = require('./src/utils/algolia_queries')
 
 const pluginConfig = [
   `gatsby-plugin-twitter`,
-  `gatsby-plugin-react-helmet`,
-  `gatsby-plugin-transition-link`,
+  `gatsby-plugin-image`,
   {
     // keep as first gatsby-source-filesystem plugin for gatsby image support
     resolve: 'gatsby-source-filesystem',
@@ -21,17 +20,8 @@ const pluginConfig = [
     options: {
       plugins: [
         {
-          resolve: 'gatsby-remark-relative-images',
-          options: {
-            name: 'uploads'
-          }
-        },
-        {
           resolve: 'gatsby-remark-images',
           options: {
-            // It's important to specify the maxWidth (in pixels) of
-            // the content container as this plugin uses this as the
-            // base for generating different widths of each image.
             maxWidth: 960,
             linkImagesToOriginal: false
           }
@@ -52,7 +42,7 @@ const pluginConfig = [
             removeAccents: true
           }
         },
-        `gatsby-remark-prismjs`,
+        `gatsby-remark-prismjs`
       ]
     }
   },
@@ -106,7 +96,7 @@ const pluginConfig = [
           },
           query: `
             {
-              allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}) {
+              allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
                 edges {
                   node {
                     fields {
@@ -135,16 +125,14 @@ const pluginConfig = [
 
 if (process.env.CONTEXT === 'production') {
   const algolia = {
-    resolve: `gatsby-plugin-algolia-search`,
+    resolve: `gatsby-plugin-algolia`,
     options: {
       appId: process.env.GATSBY_ALGOLIA_APP_ID,
       apiKey: process.env.ALGOLIA_ADMIN_KEY,
       queries,
-      chunkSize: 10000, // default: 1000
-      enablePartialUpdates: true
+      chunkSize: 10000
     }
   }
-
 
   pluginConfig.push(algolia)
 }
@@ -152,15 +140,15 @@ if (process.env.CONTEXT === 'production') {
 module.exports = {
   siteMetadata: {
     title: `Luiz Correia`,
-    titleTemplate: "%s · Luiz Correia",
-    defaultTitle: "Luiz Correia",
+    titleTemplate: '%s · Luiz Correia',
+    defaultTitle: 'Luiz Correia',
     position: 'Desenvolvedor Full Stack',
     description: `Um blog de um desenvolvedor`,
     authorDescription: `Membro do Core Team da Meatballs, escrevo sobre tecnologia.`,
     author: `@luiz__correia`,
     siteUrl: 'https://luizcorreia.eti.br',
     image: '/assets/img/blog-image.png',
-    twitterUsername: `@luiz__correia`,
+    twitterUsername: `@luiz__correia`
   },
   plugins: pluginConfig
 }

@@ -19,7 +19,6 @@ const BlogList = props => {
 
   return (
     <Layout>
-      <SEO title="Home" />
       <S.ListWrapper>
         {postList.map(({ node }, i) => (
           <Post
@@ -49,10 +48,14 @@ const BlogList = props => {
 
 export default BlogList
 
+export function Head() {
+  return <SEO title="Home" />
+}
+
 export const PostListQuery = graphql`
   query PostListQuery($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
-      sort: { fields: frontmatter___date, order: DESC }
+      sort: { frontmatter: { date: DESC } }
       limit: $limit
       skip: $skip
     ) {

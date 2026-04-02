@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import ReactDisqusComments from 'react-disqus-comments'
+import { DiscussionEmbed } from 'disqus-react'
 
 import * as S from './styled'
 
@@ -10,11 +10,13 @@ const Comments = ({ url, title }) => {
   return (
     <S.CommentsWrapper>
       <S.CommentsTitle>Comentários</S.CommentsTitle>
-      <ReactDisqusComments
+      <DiscussionEmbed
         shortname="luizcorreia"
-        identifier={completeURL}
-        title={title}
-        url={completeURL}
+        config={{
+          url: completeURL,
+          identifier: completeURL,
+          title
+        }}
       />
     </S.CommentsWrapper>
   )

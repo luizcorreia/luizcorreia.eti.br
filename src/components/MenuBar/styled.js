@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import { Link } from 'gatsby'
 
 import transitions from '../../styles/transitions'
 
@@ -42,7 +42,7 @@ export const MenuBarGroup = styled.div`
   `}
 `
 
-export const MenuBarLink = styled(AniLink)`
+export const MenuBarLink = styled(Link)`
   display: block;
 
   &.active {

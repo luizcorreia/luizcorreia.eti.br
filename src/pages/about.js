@@ -8,10 +8,6 @@ import { MainContent } from '../styles/base'
 
 const AboutPage = () => (
   <Layout>
-    <SEO
-      title="Sobre mim"
-      description="Saiba um pouco mais sobre o desenvolvedor por trás deste blog."
-    />
     <MainContent>
       <h1>Sobre mim</h1>
       <p>
@@ -64,3 +60,12 @@ const AboutPage = () => (
 )
 
 export default AboutPage
+
+export function Head() {
+  return (
+    <SEO
+      title="Sobre mim"
+      description="Saiba um pouco mais sobre o desenvolvedor por trás deste blog."
+    />
+  )
+}
