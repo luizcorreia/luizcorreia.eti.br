@@ -1,6 +1,6 @@
 ---
 title: "Dicas de Privacidade e Segurança no Android"
-date: "2026-04-04"
+date: "2026-04-06"
 layout: post
 description: 'Um guia prático e atualizado com dicas para usar seu Android com mais segurança e privacidade — adaptado para a realidade brasileira.'
 introduction: 'Um guia prático e atualizado com dicas para usar seu Android com mais segurança e privacidade — adaptado para a realidade brasileira.'

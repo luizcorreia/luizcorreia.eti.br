@@ -1,6 +1,6 @@
 ---
 layout: post
-date: '2026-04-02'
+date: '2026-03-21'
 image: /assets/img/2026-04-02-por-que-a-privacidade-importa/cover.png
 title: "Por que a privacidade importa — mesmo que você não tenha nada a esconder"
 description: 'A frase favorita dos vigilantes é "não tenho nada a esconder". Veja por que esse argumento é ingênuo e como seus dados estão sendo usados contra você.'

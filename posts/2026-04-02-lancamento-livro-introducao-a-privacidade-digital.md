@@ -1,6 +1,6 @@
 ---
 layout: post
-date: '2026-04-02'
+date: '2026-03-12'
 image: /assets/img/2026-04-02-lancamento-livro-privacidade-digital/cover.png
 title: "Lancei um livro: Introdução à Privacidade Digital"
 description: 'Escrevi um guia prático sobre privacidade digital — navegadores, VPNs, e-mail seguro, mensageiros, LGPD e muito mais. Disponível agora na Amazon.'
