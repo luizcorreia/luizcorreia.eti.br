@@ -1,6 +1,7 @@
 ---
 layout: post
 date: '2026-07-27'
+image: /assets/img/2026-07-27-mec-livros-no-koreader/icon.svg
 title: 'MEC Livros no KOReader: um plugin para ler no Kobo, Kindle e outros dispositivos'
 description: 'Conheça o plugin não oficial que leva busca, empréstimos e leitura do MEC Livros ao KOReader, respeitando o modelo de acesso da plataforma.'
 introduction: 'Um plugin não oficial para acessar o MEC Livros diretamente no KOReader, com busca, empréstimos, domínio público e leitura local.'

@@ -1,6 +1,7 @@
 ---
 layout: post
 date: '2026-07-27'
+image: /assets/img/2026-07-27-divulgacao-responsavel-mec-livros/icon.svg
 title: 'Divulgação responsável: uma falha de autorização corrigida no MEC Livros'
 description: 'Como um teste no MEC Livros levou à identificação, correção e prevenção de regressão de uma falha de autorização, sem expor usuários ou detalhes exploráveis.'
 introduction: 'Um relato de divulgação responsável sobre uma falha de autorização corrigida no MEC Livros e as lições do processo.'

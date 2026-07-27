@@ -2,6 +2,7 @@
 title: "Como Criar e Usar uma Conta Google Anonimamente no GrapheneOS"
 date: "2026-04-04"
 layout: post
+image: /assets/img/2026-04-04-conta-google-anonima-grapheneos/icon.svg
 description: 'Um guia prático para brasileiros que querem manter privacidade ao usar serviços Google no GrapheneOS, sem expor sua identidade real.'
 introduction: 'Um guia prático para brasileiros que querem manter privacidade ao usar serviços Google no GrapheneOS, sem expor sua identidade real.'
 twitter_text: 'Como criar e usar uma conta Google anonimamente no GrapheneOS — guia adaptado para o Brasil'

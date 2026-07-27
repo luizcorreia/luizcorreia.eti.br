@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { formatDate, getPosts } from '../../lib/posts'
+
+const perPage = 20
+const posts = getPosts()
+
+export function getStaticPaths() {
+  const perPage = 20
+  const posts = getPosts()
+  return Array.from({ length: Math.ceil(posts.length / perPage) - 1 }, (_, index) => {
+    const page = index + 2
+    return { params: { page: String(page) }, props: { page } }
+  })
+}
+
+const { page } = Astro.props
+const pagePosts = posts.slice((page - 1) * perPage, page * perPage)
+---
+
+<BaseLayout title={`Página ${page}`}>
+  <section class="post-list">
+    {pagePosts.map((post) => (
+      <a class="post-card" href={`/${post.slug}/`}>
+        <div class:list={['post-media', post.frontmatter.main_class && `is-${post.frontmatter.main_class}`]}>
+          {post.frontmatter.image ? (
+            <img src={post.frontmatter.image} alt="" loading="lazy" decoding="async" />
+          ) : null}
+          <span>{post.frontmatter.main_class || 'post'}</span>
+        </div>
+        <div class="post-info">
+          <p class="meta">{formatDate(post.frontmatter.date)} · {post.minutes} min de leitura</p>
+          <h2>{post.frontmatter.title}</h2>
+          {post.frontmatter.description && <p>{post.frontmatter.description}</p>}
+        </div>
+      </a>
+    ))}
+  </section>
+  <nav class="pagination" aria-label="Paginação">
+    <a href={page === 2 ? '/' : `/page/${page - 1}/`}>Posts mais recentes</a>
+    {page * perPage < posts.length && <a href={`/page/${page + 1}/`}>Posts anteriores</a>}
+  </nav>
+</BaseLayout>

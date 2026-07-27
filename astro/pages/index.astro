@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { formatDate, getPosts } from '../lib/posts'
+
+const posts = getPosts().slice(0, 20)
+---
+
+<BaseLayout title="Home">
+  <section class="post-list">
+    {posts.map((post) => (
+      <a class="post-card" href={`/${post.slug}/`}>
+        <div class:list={['post-media', post.frontmatter.main_class && `is-${post.frontmatter.main_class}`]}>
+          {post.frontmatter.image ? (
+            <img src={post.frontmatter.image} alt="" loading="lazy" decoding="async" />
+          ) : null}
+          <span>{post.frontmatter.main_class || 'post'}</span>
+        </div>
+        <div class="post-info">
+          <p class="meta">{formatDate(post.frontmatter.date)} · {post.minutes} min de leitura</p>
+          <h2>{post.frontmatter.title}</h2>
+          {post.frontmatter.description && <p>{post.frontmatter.description}</p>}
+        </div>
+      </a>
+    ))}
+  </section>
+</BaseLayout>

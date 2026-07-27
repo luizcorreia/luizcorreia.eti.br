@@ -2,6 +2,7 @@
 title: "Dicas de Privacidade e Segurança no Android"
 date: "2026-04-06"
 layout: post
+image: /assets/img/2026-04-04-dicas-de-privacidade-e-seguranca-no-android/icon.svg
 description: 'Um guia prático e atualizado com dicas para usar seu Android com mais segurança e privacidade — adaptado para a realidade brasileira.'
 introduction: 'Um guia prático e atualizado com dicas para usar seu Android com mais segurança e privacidade — adaptado para a realidade brasileira.'
 twitter_text: 'Dicas de privacidade e segurança no Android — guia atualizado para 2026 e adaptado para o Brasil'

@@ -1,0 +1,20 @@
+---
+interface Props {
+  name: 'github' | 'grid' | 'home' | 'instagram' | 'search' | 'theme' | 'twitter' | 'up' | 'youtube'
+}
+
+const { name } = Astro.props
+const isBrand = ['github', 'instagram', 'twitter', 'youtube'].includes(name)
+---
+
+<svg viewBox="0 0 24 24" aria-hidden="true" fill={isBrand || name === 'home' || name === 'grid' ? 'currentColor' : 'none'} stroke={isBrand || name === 'home' || name === 'grid' ? 'none' : 'currentColor'} stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  {name === 'home' && <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />}
+  {name === 'search' && <><circle cx="11" cy="11" r="6" /><path d="m20 20-4.2-4.2" /></>}
+  {name === 'theme' && <><path d="M9 21h6" /><path d="M10 17h4" /><path d="M8.5 14.5A7 7 0 1 1 15.5 14.5C14.5 15.2 14 16 14 17h-4c0-1-.5-1.8-1.5-2.5Z" /></>}
+  {name === 'grid' && <path d="M3 3h5v5H3V3Zm6.5 0h5v5h-5V3ZM16 3h5v5h-5V3ZM3 9.5h5v5H3v-5Zm6.5 0h5v5h-5v-5Zm6.5 0h5v5h-5v-5ZM3 16h5v5H3v-5Zm6.5 0h5v5h-5v-5Zm6.5 0h5v5h-5v-5Z" />}
+  {name === 'up' && <><path d="m18 15-6-6-6 6" /><path d="M12 9v12" /></>}
+  {name === 'github' && <path d="M12 .7A11.5 11.5 0 0 0 8.4 23c.6.1.8-.3.8-.6v-2.2c-3.4.7-4.1-1.4-4.1-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.6.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.5.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.8 5.4-5.5 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .7Z" />}
+  {name === 'twitter' && <path d="M23 4.7c-.8.4-1.7.6-2.7.7a4.6 4.6 0 0 0 2-2.5c-.9.5-1.9.9-2.9 1.1a4.6 4.6 0 0 0-7.9 4.2A13 13 0 0 1 2 3.4a4.6 4.6 0 0 0 1.4 6.1c-.7 0-1.4-.2-2.1-.6 0 2.2 1.6 4.1 3.7 4.5-.4.1-.8.2-1.2.2-.3 0-.6 0-.9-.1a4.6 4.6 0 0 0 4.3 3.2A9.3 9.3 0 0 1 1.5 19H.4a13 13 0 0 0 7 2c8.5 0 13.1-7 13.1-13.1v-.6c.9-.7 1.7-1.5 2.3-2.4Z" />}
+  {name === 'youtube' && <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z" />}
+  {name === 'instagram' && <><rect x="2" y="2" width="20" height="20" rx="5" /><circle cx="12" cy="12" r="4.5" fill="var(--surface)" /><circle cx="18" cy="6" r="1.2" /></>}
+</svg>

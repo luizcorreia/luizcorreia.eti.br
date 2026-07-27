@@ -1,0 +1,103 @@
+---
+import '../styles/astro.css'
+import Icon from '../components/Icon.astro'
+
+interface Props {
+  article?: boolean
+  description?: string
+  image?: string
+  title?: string
+}
+
+const {
+  article = false,
+  description = 'Blog sobre tecnologia, segurança e privacidade digital',
+  image = '/assets/img/blog-image.png',
+  title
+} = Astro.props
+const pageTitle = title ? `${title} · Luiz Correia` : 'Luiz Correia'
+const canonicalUrl = new URL(Astro.url.pathname, 'https://luizcorreia.eti.br')
+const imageUrl = new URL(image, canonicalUrl).href
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" href="/assets/img/luizcorreia-icon.png" />
+    <link rel="alternate" type="application/rss+xml" title="Luiz Correia Blog" href="/rss.xml" />
+    <meta property="og:type" content={article ? 'article' : 'website'} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={imageUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@luiz__correia" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageUrl} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <a class="identity" href="/">
+        <img src="/assets/img/profile-photo.jpg" alt="Luiz Correia" width="96" height="96" />
+        <span>
+          <strong>Luiz Correia</strong>
+          <small>Arquiteto de Soluções | Segurança e Privacidade</small>
+        </span>
+      </a>
+      <p>Arquiteto de soluções apaixonado por segurança e privacidade. Autor do livro "Introdução à Privacidade Digital".</p>
+      <nav class="social-links" aria-label="Redes sociais">
+        <a href="https://github.com/luizcorreia" rel="me noopener" title="GitHub"><Icon name="github" /></a>
+        <a href="https://twitter.com/luiz__correia" rel="me noopener" title="Twitter"><Icon name="twitter" /></a>
+        <a href="https://www.youtube.com/channel/UCyIloHqHvd2wBfSLpl-wCIw" rel="me noopener" title="YouTube"><Icon name="youtube" /></a>
+        <a href="https://www.instagram.com/luiz__correia/" rel="me noopener" title="Instagram"><Icon name="instagram" /></a>
+      </nav>
+      <nav class="primary-nav" aria-label="Navegação principal">
+        <a href="/">Home</a>
+        <a href="/about/">Sobre mim</a>
+        <a href="/rss.xml">RSS</a>
+      </nav>
+    </aside>
+    <main>
+      <slot />
+    </main>
+    <aside class="utility-bar" aria-label="Ferramentas">
+      <a href="/" title="Home"><Icon name="home" /></a>
+      <a href="/search/" title="Buscar"><Icon name="search" /></a>
+      <button type="button" class="theme-toggle" title="Mudar tema"><Icon name="theme" /></button>
+      <button type="button" class="display-toggle" title="Mudar visualização"><Icon name="grid" /></button>
+      <button type="button" class="top-toggle" title="Ir ao topo"><Icon name="up" /></button>
+    </aside>
+    <script>
+      const theme = localStorage.getItem('theme') || 'dark'
+      const display = localStorage.getItem('display') || 'list'
+      document.documentElement.dataset.theme = theme
+      document.documentElement.dataset.display = display
+      document.querySelector('.theme-toggle')?.addEventListener('click', () => {
+        const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'
+        document.documentElement.dataset.theme = nextTheme
+        localStorage.setItem('theme', nextTheme)
+      })
+      document.querySelector('.top-toggle')?.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      })
+      document.querySelector('.display-toggle')?.addEventListener('click', () => {
+        const updateDisplay = () => {
+          const nextDisplay = document.documentElement.dataset.display === 'list' ? 'card' : 'list'
+          document.documentElement.dataset.display = nextDisplay
+          localStorage.setItem('display', nextDisplay)
+        }
+        if (document.startViewTransition) {
+          document.startViewTransition(updateDisplay)
+        } else {
+          updateDisplay()
+        }
+      })
+    </script>
+  </body>
+</html>

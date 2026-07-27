@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { formatDate, getPosts } from '../lib/posts'
+
+export function getStaticPaths() {
+  const posts = getPosts()
+  return posts.map((post, index) => ({
+    params: { slug: post.slug },
+    props: { post, next: posts[index - 1], previous: posts[index + 1] }
+  }))
+}
+
+const { post, next, previous } = Astro.props
+const { Content } = post
+const postUrl = `https://luizcorreia.eti.br/${post.slug}/`
+---
+
+<BaseLayout article title={post.frontmatter.title} description={post.frontmatter.description} image={post.frontmatter.image}>
+  <article class="article">
+    <header class="article-header">
+      <p class="meta">{formatDate(post.frontmatter.date)} · {post.minutes} min de leitura</p>
+      <h1>{post.frontmatter.title}</h1>
+      {post.frontmatter.description && <p class="description">{post.frontmatter.description}</p>}
+    </header>
+    <div class="article-content">
+      <Content />
+    </div>
+    <nav class="post-navigation" aria-label="Navegação entre posts">
+      {next && <a href={`/${next.slug}/`}>← {next.frontmatter.title}</a>}
+      {previous && <a href={`/${previous.slug}/`}>{previous.frontmatter.title} →</a>}
+    </nav>
+    <section class="comments">
+      <h2>Comentários</h2>
+      <div id="disqus_thread"></div>
+    </section>
+  </article>
+  <script is:inline define:vars={{ postUrl, title: post.frontmatter.title }}>
+    window.disqus_config = function () {
+      this.page.url = postUrl
+      this.page.identifier = postUrl
+      this.page.title = title
+    }
+    const script = document.createElement('script')
+    script.src = 'https://luizcorreia.disqus.com/embed.js'
+    script.setAttribute('data-timestamp', String(Date.now()))
+    document.head.append(script)
+  </script>
+</BaseLayout>

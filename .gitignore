@@ -3,6 +3,8 @@ _site
 node_modules
 _drafts
 .cache
+.astro
+dist
 .vscode
 public
 .env

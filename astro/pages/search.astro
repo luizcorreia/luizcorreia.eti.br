@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { formatDate, getPosts } from '../lib/posts'
+
+const posts = getPosts().map((post) => ({
+  date: formatDate(post.frontmatter.date),
+  description: post.frontmatter.description || '',
+  slug: post.slug,
+  title: post.frontmatter.title
+}))
+---
+
+<BaseLayout title="Buscar">
+  <section class="article search-page">
+    <h1>Buscar</h1>
+    <label for="search-input">Pesquise por título ou descrição</label>
+    <input id="search-input" type="search" placeholder="Digite para buscar" autocomplete="off" />
+    <div id="search-results" class="search-results"></div>
+  </section>
+  <script is:inline define:vars={{ posts }}>
+    const input = document.querySelector('#search-input')
+    const results = document.querySelector('#search-results')
+    const render = (query) => {
+      const normalized = query.trim().toLocaleLowerCase('pt-BR')
+      const matches = normalized ? posts.filter((post) => `${post.title} ${post.description}`.toLocaleLowerCase('pt-BR').includes(normalized)) : []
+      results.innerHTML = matches.map((post) => `<a href="/${post.slug}/"><small>${post.date}</small><strong>${post.title}</strong><span>${post.description}</span></a>`).join('') || (normalized ? '<p>Nenhum post encontrado.</p>' : '')
+    }
+    input.addEventListener('input', (event) => render(event.target.value))
+  </script>
+</BaseLayout>
