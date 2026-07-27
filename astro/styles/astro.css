@@ -142,7 +142,7 @@ main { margin-left: 20rem; margin-right: 3.75rem; min-height: 100vh; padding: 0;
   .identity strong { font-size: 1.2rem; }
   .identity small { font-size: .85rem; }
   .sidebar p { display: none; }
-  .social-links { display: none; }
+  .sidebar .social-links { display: none; }
   .sidebar .primary-nav { display: flex; font-size: .8rem; gap: 1rem; margin: 0; }
   main { margin: 0; padding-bottom: 3.2rem; }
   .post-card { align-items: flex-start; min-height: auto; padding: 1.5rem 1rem; }
@@ -166,6 +166,11 @@ main { margin-left: 20rem; margin-right: 3.75rem; min-height: 100vh; padding: 0;
   .utility-bar { border-left: 0; border-top: 1px solid var(--border); bottom: 0; flex-direction: row; height: 3.2rem; justify-content: space-around; padding: 0; top: auto; width: 100%; }
   .utility-bar a, .utility-bar button { height: 3.2rem; width: 3.2rem; }
   .utility-bar svg { height: 1.45rem; width: 1.45rem; }
+  .utility-bar .display-toggle { display: none; }
+  :root[data-display="card"] .post-list { background: transparent; display: block; }
+  :root[data-display="card"] .post-card { align-items: flex-start; background: var(--background); flex-direction: row; justify-content: flex-start; min-height: auto; padding: 1.5rem 1rem; text-align: left; }
+  :root[data-display="card"] .post-media { flex-basis: auto; height: auto; width: auto; }
+  :root[data-display="card"] .post-info { margin: 0 0 0 .75rem; }
 }
 @media (max-width: 768px) {
   .identity small { max-width: 14rem; }
