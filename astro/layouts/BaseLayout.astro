@@ -74,6 +74,12 @@ const imageUrl = new URL(image, canonicalUrl).href
       <button type="button" class="top-toggle" title="Ir ao topo"><Icon name="up" /></button>
     </aside>
     <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(registrations => {
+          registrations.forEach(registration => registration.unregister())
+        })
+      }
+
       const theme = localStorage.getItem('theme') || 'dark'
       const display = localStorage.getItem('display') || 'list'
       document.documentElement.dataset.theme = theme
