@@ -20,11 +20,39 @@ const posts = getPosts().map((post) => ({
   <script is:inline define:vars={{ posts }}>
     const input = document.querySelector('#search-input')
     const results = document.querySelector('#search-results')
+
+    const createPostLink = (post) => {
+      const link = document.createElement('a')
+      const date = document.createElement('small')
+      const title = document.createElement('strong')
+      const description = document.createElement('span')
+
+      link.href = `/${post.slug}/`
+      date.textContent = post.date
+      title.textContent = post.title
+      description.textContent = post.description
+      link.append(date, title, description)
+
+      return link
+    }
+
     const render = (query) => {
       const normalized = query.trim().toLocaleLowerCase('pt-BR')
       const matches = normalized ? posts.filter((post) => `${post.title} ${post.description}`.toLocaleLowerCase('pt-BR').includes(normalized)) : []
-      results.innerHTML = matches.map((post) => `<a href="/${post.slug}/"><small>${post.date}</small><strong>${post.title}</strong><span>${post.description}</span></a>`).join('') || (normalized ? '<p>Nenhum post encontrado.</p>' : '')
+
+      results.replaceChildren()
+      if (matches.length) {
+        results.append(...matches.map(createPostLink))
+        return
+      }
+
+      if (normalized) {
+        const emptyMessage = document.createElement('p')
+        emptyMessage.textContent = 'Nenhum post encontrado.'
+        results.append(emptyMessage)
+      }
     }
+
     input.addEventListener('input', (event) => render(event.target.value))
   </script>
 </BaseLayout>
